@@ -1,0 +1,220 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figure Paradise</title>
+    <link rel="stylesheet" href="../CSS/Figure.css">
+    <script src="../JS/Sale.js"></script>
+    <script src="../JS/SaleHeader.js"></script>
+</head>
+
+<body>
+    <div id="zoom" style="display: none;">
+                <img id="zoomImg">
+                <img src="../Images/exit.png" style="position: absolute; top: 0px; left: 0px; width: 50px; height: 50px;" onclick="exitF()">
+                <div id="here">
+                    <form action="#" method="post" name="shipInfo" onsubmit="return validate();">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>
+                                        <input type="text" name="firstname" style="width: 250px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td>
+                                        <input type="email" name="email" style="width: 250px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Country</td>
+                                    <td>
+                                        <select style="width: 250px;" name="Country">
+                                            <option value="0">Select your country</option>
+                                            <option value="1">VietNam</option>
+                                            <option value="2">Japan</option>
+                                            <option value="3">America</option>
+                                            <option value="4">Korea</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Adress</td>
+                                    <td>
+                                        <input type="text" name="Adress" style="width: 250px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Quantity</td>
+                                    <td>
+                                        <input type="number" name="Quantity" style="width: 250px;" value="0">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="text-align: center; padding-top: 20px;">
+                                        <input type="submit" value="Order" class="btn">
+                                        <input type="reset" value="Cancel" class="btn">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+    <div class="content">
+        <header>
+            <img id="slide" src="../Images/fheader1.png" width="850" height="315">
+            <div id="past">
+                <img src="../Images/button1.png" onclick="back()" style="width: 28px; height: 44px;">
+            </div>
+            <div id="next">
+                <img src="../Images/button2.png" onclick="back()" style="width: 28px; height: 44px;">
+            </div>
+        </header>
+        <nav>
+            <table>
+                <tbody>
+                    <tr>
+                        <th style="width: 200px font-size: 25px"><a href="MainPage.html">Otaku Paradise</a>
+                        </th>
+                        <th style="margin-left: 5px; margin-top: 5px;">Upload</th>
+                        <th style="margin-left: 0px; margin-top: 0px;">
+                            <div class="dropdown1">
+                                <button class="dropbtn1" style="margin-left: -20px; margin-top: 1px; height: 43px;">Menu</button>
+                                <div class="dropdown-content1" style="left: -56px; top: 34px;">
+                                    <p><a href="Manga.html">Manga</a>
+                                    </p>
+                                    <p><a href="LightNovel.html">LightNovel</a>
+                                    </p>
+                                    <p><a href="Wallpaper.html">Wallpaper</a>
+                                    </p>
+                                    <p><a href="Sale.html">Sale</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </th>
+                        <th>Search:</th>
+                        <th>
+                            <form>
+                                <input type="text" name="Search" style="width: 250px; margin-left: -6px; margin-top: -11px;">
+                            </form>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </nav>
+        <article>
+            
+            <div style="font-size: 20px; border-bottom: 3px solid green; height: 50px;">
+                <p><b style="color: green">Figure</b> &gt; Newest</p>
+            </div>
+
+            <div class="figure" id="f1" onmousedown="send(this.id, Event);">
+
+                <img src="../Images/f1.png" class="50000" id="f1" onmousedown="zoomIn(this.className, this.id)">
+                <p class="name">Zero two (Darling in the Franxx!)</p>
+                <p>50000 VND</p>
+                <div class="promotion">
+                    -20%
+                </div>
+            </div>
+
+
+
+            <div class="figure" id="f2" onmousedown="send(this.id, Event);">
+                <img src="../Images/f2.png" class="1000000" id="f2" onmousedown="zoomIn(this.className, this.id)">
+                <p class="name">Frankenstein (Fgo!)</p>
+                <p>1.000.000 VND</p>
+                <div class="promotion">
+                    -20%
+                </div>
+            </div>
+
+
+
+            <div class="figure">
+                <img src="../Images/f3.png" class="4000000" id="f3" onmousedown="zoomIn(this.className, this.id)">
+                <p class="name">Kaori </p>
+                <p>4.000.000 VND</p>
+                <div class="promotion">
+                    -20%
+                </div>
+            </div>
+
+
+
+            <div class="figure">
+                <img src="../Images/f4.png" class="3000000" id="f4" onmousedown="zoomIn(this.className, this.id)">
+                <p class="name">School uniform Kaori (Shigatsu wa kimi no uso!)</p>
+                <p>3.000.000 VND</p>
+                <div class="promotion">
+                    -20%
+                </div>
+            </div>
+
+
+
+            <div class="figure">
+                <img src="../Images/f5.png" class="7000000" id="f5" onmousedown="zoomIn(this.className, this.id)">
+                <p class="name">Oh my god! (Shigatsu wa kimi no uso!)</p>
+                <p>7.000.000 VND</p>
+                <div class="promotion">
+                    -20%
+                </div>
+            </div>
+
+
+
+            <div class="figure">
+                <img src="../Images/f6.png" class="100000" id="f6" onmousedown="zoomIn(this.className, this.id)">
+                <p class="name">Umaru (Umaru chan!)</p>
+                <p>100000 VND</p>
+                <div class="promotion">
+                    -20%
+                </div>
+            </div>
+
+
+
+            <div class="figure">
+                <img src="../Images/f7.png" class="2500000" id="f7" onmousedown="zoomIn(this.className, this.id)">
+                <p class="name">Jeane Alter! (fgo!)</p>
+                <p>2.500.000 VND</p>
+                <div class="promotion">
+                    -20%
+                </div>
+            </div>
+
+
+
+            <div class="figure">
+                <img src="../Images/f8.png" class="2000000" id="f8" onmousedown="zoomIn(this.className, this.id)">
+                <p class="name">Artoria (Fgo!)</p>
+                <p>2.000.000 VND</p>
+                <div class="promotion">
+                    -20%
+                </div>
+            </div>
+
+
+
+        </article>
+        <footer>
+            <div>
+                <p>All submitted content remains copyright its original copyright holder| DMCA Violation Images are for personal, non commercial use </p>
+                <p>Website text and design is copyright 2016 OtakuParadise.Developed by NTKD-Language: </p>
+            </div>
+            <div>
+                <div class="contact_left contact"><a href="Policy.html">Policy</a>
+                </div>
+                <div class="contact_right contact"><a href="ContactUs.html">Contact</a>
+                </div>
+            </div>
+        </footer>
+
+        <button onclick="topFunction()" id="myBtn" style="display: block;"><img src="../Images/PageUp.png" width="30px;" height="30px;">
+        </button>
+    </div>
+
+</body>

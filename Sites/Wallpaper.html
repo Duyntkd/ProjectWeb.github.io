@@ -1,0 +1,85 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper Paradise</title>
+    <link rel="stylesheet" href="../CSS/Wallpaper.css">
+    <script src="../JS/Exercise1.js"></script>
+    <script src="../JS/Wallpaper.js"> </script>
+</head>
+
+<body>
+    <div class="content">
+    <header>
+            <img id="slide" src="../Images/header1.png" width="850" height="315">       
+    </header>
+        <nav>
+            <table>
+                <tbody>
+                    <tr>
+                        <th style="width: 200px font-size: 25px"><a href="MainPage.html">Otaku Paradise</a>
+                        </th>
+                        <th>Upload</th>
+                        <th style="margin-left: 0px; margin-top: 0px;">
+                            <div class="dropdown1">
+                                <button class="dropbtn1" style="margin-left: -12px; margin-top: -5px; height: 36px;">Menu</button>
+                                <div class="dropdown-content1" style="left: -56px; top: 34px;">
+                                    <p><a href="Manga.html">Manga</a>
+                                    </p>
+                                    <p><a href="LightNovel.html">LightNovel</a>
+                                    </p>
+                                    <p><a href="Wallpaper.html">Wallpaper</a>
+                                    </p>
+                                    <p><a href="Sale.html">Sale</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </th>
+                        <th>Search:</th>
+                        <th>
+                            <form>
+                                <input type="text" name="Search" style="width: 250px; margin-left: 0px; margin-top: 19px;">
+                            </form>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </nav>
+        <article class="blurable">
+            <div style="font-size: 20px; border-bottom: 3px solid green; height: 50px;">
+                <p><b style="color: green">WallPaper</b> &gt; Newest</p>
+            </div>
+            <div style="background-color: aquamarine; border-bottom: 3px solid green;">
+                <p style="font-size: 30px; text-align: center; color: blue;">WallPaper</p>
+                <p style="font-size: 20px; text-align: center; color: cadetblue;">Most Favourite - View Category</p>
+            </div>
+            <div id="images" style="overflow: scroll; background-color: darkblue; height: 800px; margin-bottom: 0px; position: absolute; z-index: 1; position: relative;">
+                
+            </div>
+
+        </article>
+       <footer>
+            <div>
+                <p>All submitted content remains copyright its original copyright holder| DMCA Violation Images are for personal, non commercial use </p>
+                <p>Website text and design is copyright 2016 OtakuParadise.Developed by NTKD-Language: </p>
+            </div>
+            <div>
+                <div class="contact_left contact"><a href="Policy.html">Policy</a>
+                </div>
+                <div class="contact_right contact"><a href="ContactUs.html">Contact</a>
+                </div>
+            </div>
+        </footer>
+        <button onclick="topFunction()" id="myBtn" style="z-index: 999;"><img src="../Images/PageUp.png" width="30px;" height="30px;"></button>
+        <div id="zoom" style="display: none;">
+            <img id = "zoomImg"> 
+            <img src="../Images/exit.png" style="position: absolute; top: 0px; left: 0px; width: 50px; height: 50px;" onclick="exitf()">
+            <form method="get" onclick="download()" id="dlbtn">
+            <button type="submit"><img src="../Images/dl2.png" style="position: absolute; top: 0px; right: 0px; width: 50px; height: 50px;">
+            </button>
+            </form>
+        </div>
+        
+    </div>
+
+
+</body>

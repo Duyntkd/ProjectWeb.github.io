@@ -1,0 +1,87 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/MainPage.css">
+    <title>Otaku Paradise</title>
+    <script>
+        window.onscroll = function() {scrollFunction()};        
+        function scrollFunction() {
+            if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {        document.getElementById("myBtn").style.display = "block";
+            } 
+            else {
+            document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0; 
+        }
+        
+    </script>
+    
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <img id="slide" src="../Images/header1.png" width="850" height="315">       
+        </header>
+        <nav>
+            <table>
+                <tbody>
+                    <tr>
+                        <th style="width: 200px font-size: 25px"><a href="MainPage.html">Otaku Paradise</a>
+                        </th>
+                        <th>Upload</th>
+                        <th style="margin-left: 0px; margin-top: 0px;">
+                            <div class="dropdown1">
+                                <button class="dropbtn1" style="margin-left: -12px; margin-top: -5px; height: 36px;">Menu</button>
+                                <div class="dropdown-content1" style="left: -56px; top: 34px;">
+                                    <p><a href="Manga.html">Manga</a>
+                                    </p>
+                                    <p><a href="LightNovel.html">LightNovel</a>
+                                    </p>
+                                    <p><a href="Wallpaper.html">Wallpaper</a>
+                                    </p>
+                                    <p><a href="Sale.html">Sale</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </th>
+                        <th>Search:</th>
+                        <th>
+                            <form>
+                                <input type="text" name="Search" style="width: 250px; margin-left: 0px; margin-top: 19px;">
+                            </form>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </nav>
+        <article style="background-color: whitesmoke; text-align: center; font-weight: bold; font-size: 25px;">
+            <p>             
+                Advertise, report, request or share infomations. please send to Paradise1999@gmail.com
+            </p>
+            <p>
+                 Paradise Adress: 111/Tô Ký/Gò Vấp
+            </p>
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.022842144905!2d106.6734373146841!3d10.809562261537291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529208666bf35%3A0x3741e1d56a6fb76!2sPhu+Nhuan+High+School!5e0!3m2!1sen!2s!4v1531642928345" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </article>
+        <footer>
+            <div>
+                <p>All submitted content remains copyright its original copyright holder| DMCA Violation Images are for personal, non commercial use </p>
+                <p>Website text and design is copyright 2016 OtakuParadise.Developed by NTKD-Language: </p>
+            </div>
+            <div>
+                <div class="contact_left contact"><a href="Policy.html">Policy</a>
+                </div>
+                <div class="contact_right contact"><a href="ContactUs.html">Contact</a>
+                </div>
+            </div>
+        </footer>
+        <button onclick="topFunction()" id="myBtn"><img src="../Images/PageUp.png" width="30px;" height="30px;"></button>
+    </div>
+
+
+</body>

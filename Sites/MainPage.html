@@ -1,0 +1,100 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/MainPage.css">
+    <title>Otaku Paradise</title>
+    <script>
+        window.onscroll = function() {scrollFunction()};        
+        function scrollFunction() {
+            if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {        document.getElementById("myBtn").style.display = "block";
+            } 
+            else {
+            document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0; 
+        }
+        
+    </script>
+    
+</head>
+
+<body>
+    
+    <div class="content">
+        <header>
+            <img id="slide" src="../Images/header1.png" width="850" height="315">       
+        </header>
+        <nav>
+            <table>
+                <tbody>
+                    <tr>
+                        
+                        <th style="width: 200px font-size: 25px"><a href="MainPage.html">Otaku Paradise</a>
+                        </th>
+                        <th>Upload</th>
+                        <th style="margin-left: 0px; margin-top: 0px;">
+                            <div class="dropdown1">
+                                <button class="dropbtn1" style="margin-left: -12px; margin-top: -5px; height: 36px;">Menu</button>
+                                <div class="dropdown-content1" style="left: -56px; top: 34px;">
+                                    <p><a href="Manga.html">Manga</a>
+                                    </p>
+                                    <p><a href="LightNovel.html">LightNovel</a>
+                                    </p>
+                                    <p><a href="Wallpaper.html">Wallpaper</a>
+                                    </p>
+                                    <p><a href="Sale.html">Sale</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </th>
+                        <th>Search:</th>
+                        <th>
+                            <form>
+                                <input type="text" name="Search" style="width: 250px; margin-left: 0px; margin-top: 19px;">
+                            </form>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </nav>
+        <article>
+            <table>
+                <tbody>
+                    <tr>
+                        <th style="background-color: gainsboro;"><a href="Manga.html">Manga</a> <img src="../Images/trasnparent1.png">
+                        </th>
+                        <th style="background-color: gainsboro"><a href="LightNovel.html">Light Novel</a> <img src="../Images/transparent4.png">
+                        
+                        </th>
+                    </tr>
+                    <tr>
+                        <th style="background-color: gainsboro"><a href="Sale.html">Sale</a> <img src="../Images/transparent7.png">
+                        </th>
+                        <th style="background-color: gainsboro"><a href="Wallpaper.html">Wallpaper</a>
+                        <img src="../Images/transparent8.png">    
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+        <footer>
+            <div>
+                <p>All submitted content remains copyright its original copyright holder| DMCA Violation Images are for personal, non commercial use </p>
+                <p>Website text and design is copyright 2016 OtakuParadise.Developed by NTKD-Language: </p>
+            </div>
+            <div>
+                <div class="contact_left contact"><a href="Policy.html">Policy</a>
+                </div>
+                <div class="contact_right contact"><a href="ContactUs.html">Contact</a>
+                </div>
+            </div>
+        </footer>
+        <button onclick="topFunction()" id="myBtn"><img src="../Images/PageUp.png" width="30px;" height="30px;"></button>
+    </div>
+
+
+</body>

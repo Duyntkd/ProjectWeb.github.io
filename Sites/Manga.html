@@ -1,0 +1,181 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Paradise</title>
+    <link rel="stylesheet" href="../CSS/Manga.css">
+    <script src="../JS/Manga.js"></script>
+    <script src="../JS/MangaHeader.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <div id="read" style="display: none;">
+            <img src="../Images/exit.png" style="position: absolute; top: 0px; left: 0px; width: 50px; height: 50px;" onclick="exitRead()">
+        </div>
+        <header>
+            <img id="slide" src="../Images/mheader1.png" width="850" height="315">
+            <div id="past">
+                <img src="../Images/button1.png" onclick="back()" style="width: 28px; height: 44px;">
+            </div>
+            <div id="next">
+                <img src="../Images/button2.png" onclick="back()" style="width: 28px; height: 44px;">
+            </div>
+        </header>
+        <nav>
+            <table>
+                <tbody>
+                    <tr>
+                        <th style="width: 200px font-size: 25px"><a href="MainPage.html">Otaku Paradise</a>
+                        </th>
+                        <th>Upload</th>
+                        <th style="margin-left: 0px; margin-top: 0px;">
+                            <div class="dropdown1">
+                                <button class="dropbtn1" style="margin-left: -12px; margin-top: -5px; height: 36px;">Menu</button>
+                                <div class="dropdown-content1" style="left: -56px; top: 34px;">
+                                    <p><a href="Manga.html">Manga</a>
+                                    </p>
+                                    <p><a href="LightNovel.html">LightNovel</a>
+                                    </p>
+                                    <p><a href="Wallpaper.html">Wallpaper</a>
+                                    </p>
+                                    <p><a href="Sale.html">Sale</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </th>
+                        <th>Search:</th>
+                        <th>
+                            <form>
+                                <input type="text" name="Search" style="width: 250px; margin-left: 0px; margin-top: 19px;">
+                            </form>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </nav>
+        <article>
+            <div id="zoom" style="display: none;">
+                <img id="zoomImg">
+                <img src="../Images/exit.png" style="position: absolute; top: 0px; left: 0px; width: 50px; height: 50px;" onclick="exitF()">
+            </div>
+            <div style="font-size: 20px; border-bottom: 3px solid green; height: 50px;">
+                <p><b style="color: green">Manga</b> &gt; Newest</p>
+            </div>
+            <div style="background-color: aquamarine; border-bottom: 3px solid green;">
+                <p style="font-size: 30px; text-align: center; color: blue;">Manga</p>
+                <div class="dropdown">
+                    <button class="dropbtn">Category</button>
+                    <div class="dropdown-content">
+                        <p onclick="filter(this.id)" id="romance">Romance</p>
+                        <p onclick="filter(this.id)" id="drama">Drama</p>
+                        <p onclick="filter(this.id)" id="comedy">Comedy</p>
+                        <p onclick="filter(this.id)" id="schoollife">Schoollife</p>
+                        <p onclick="filter(this.id)" id="adventure">Adventure</p>
+                        <p onclick="filter(this.id)" id="tragedy">Tragedy</p>
+                        <p onclick="filter(this.id)" id="horror">Horror</p>
+                        <p onclick="filter(this.id)" id="survival">Survival</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="images" style="overflow: scroll; height: 800px; width: 100%; background-color: rgb(232, 250, 255);">
+                <div id="list" onclick="opacityDefault()">
+
+                    <div class="romance comedy lightnovel">
+
+                        <img src="../Images/m1.png" class="2" id="m1" onmousedown="zoomIn(this.className, this.id)">
+                        <p class="title">Nise Koi</p>
+
+                        <img src="../Images/Like2.png" style="height: 30px; width: 30px; float: left; margin-left: 235px; margin-top: -24px;" class="like1" onclick="liked(this.className[4])" onload="printLiked(this.className[4])">
+                        <p class="like" id="like1" style="margin-top: -9px;">0</p>
+
+                    </div>
+
+
+                    <div class="drama historical lightnovel">
+                        <img src="../Images/m2.png" class="3" id="m2" onmousedown="zoomIn(this.className, this.id)">
+                        <p class="title">Kingdom</p>
+
+                        <img src="../Images/Like2.png" style="height: 30px; width: 30px; float: left; margin-left: 235px; margin-top: -24px;" class="like2" onclick="liked(this.className[4])" onload="printLiked(this.className[4])">
+                        <p class="like" id="like2" style="margin-top: -9px;">0</p>
+
+                    </div>
+
+                    <div class="survival romance drama tragedy lightnovel">
+                        <img src="../Images/m3.png" class="1" id="m3" onmousedown="zoomIn(this.className, this.id)">
+                        <p class="title">Mirrai Nikki</p>
+
+                        <img src="../Images/Like2.png" style="height: 30px; width: 30px; float: left; margin-left: 235px; margin-top: -24px;" class="like3" onclick="liked(this.className[4])" onload="printLiked(this.className[4])">
+                        <p class="like" id="like3" style="margin-top: -9px;">0</p>
+                    </div>
+
+                    <div class="adventure drama lightnovel">
+                        <img src="../Images/m4.png" class="1" id="m4" onmousedown="zoomIn(this.className, this.id)">
+                        <p class="title">OnePiece</p>
+
+                        <img src="../Images/Like2.png" style="height: 30px; width: 30px; float: left; margin-left: 235px; margin-top: -24px;" class="like4" onclick="liked(this.className[4])" onload="printLiked(this.className[4])">
+                        <p class="like" id="like4" style="margin-top: -9px;">0</p>
+                    </div>
+
+                    <div class="drama romance lightnovel">
+                        <img src="../Images/m5.png" class="1" id="m5" onmousedown="zoomIn(this.className, this.id)">
+                        <p class="title">Claymore</p>
+
+                        <img src="../Images/Like2.png" style="height: 30px; width: 30px; float: left; margin-left: 235px; margin-top: -24px;" class="like5" onclick="liked(this.className[4])" onload="printLiked(this.className[4])">
+                        <p class="like" id="like5" style="margin-top: -9px;">0</p>
+
+                    </div>
+
+                    <div class="schoollife drama comedy lightnovel">
+                        <img src="../Images/m6.png" class="1" id="m6" onmousedown="zoomIn(this.className, this.id)">
+                        <p class="title">My Hero Academy</p>
+
+                        <img src="../Images/Like2.png" style="height: 30px; width: 30px; float: left; margin-left: 235px; margin-top: -24px;" class="like6" onclick="liked(this.className[4])" onload="printLiked(this.className[4])">
+                        <p class="like" id="like6" style="margin-top: -9px;">0</p>
+                    </div>
+
+                    <div class="Horror drama lightnovel">
+                        <img src="../Images/m7.png" class="1" id="m7" onmousedown="zoomIn(this.className, this.id)">
+                        <p class="title">Hellsing</p>
+
+                        <img src="../Images/Like2.png" style="height: 30px; width: 30px; float: left; margin-left: 235px; margin-top: -24px;" class="like7" onclick="liked(this.className[4])" onload="printLiked(this.className[4])">
+                        <p class="like" id="like7" style="margin-top: -9px;">0</p>
+                    </div>
+
+                    <div class="drama comedy lightnovel">
+                        <img src="../Images/m8.png" class="1" id="m8" onmousedown="zoomIn(this.className, this.id)">
+                        <p class="title">Overlord</p>
+
+                        <img src="../Images/Like2.png" style="height: 30px; width: 30px; float: left; margin-left: 235px; margin-top: -24px;" class="like8" onclick="liked(this.className[4])" onload="printLiked(this.className[4])">
+                        <p class="like" id="like8" style="margin-top: -9px;">0</p>
+                    </div>
+
+                    <div class="drama comedy lightnovel">
+                        <img src="../Images/m9.png" class="1" id="m9" onmousedown="zoomIn(this.className, this.id)">
+                        <p class="title">???</p>
+
+                        <img src="../Images/like2.png" style="height: 30px; width: 30px; float: left; margin-left: 235px; margin-top: -24px;" class="like9" onclick="liked(this.className[4])" onload="printLiked(this.className[4])">
+                        <p class="like" id="like9" style="margin-top: -9px;">0</p>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div>
+                <p>All submitted content remains copyright its original copyright holder| DMCA Violation Images are for personal, non commercial use </p>
+                <p>Website text and design is copyright 2016 OtakuParadise.Developed by NTKD-Language: </p>
+            </div>
+            <div>
+                <div class="contact_left contact"><a href="Policy.html">Policy</a>
+                </div>
+                <div class="contact_right contact"><a href="ContactUs.html">Contact</a>
+                </div>
+            </div>
+        </footer>
+
+        <button onclick="topFunction()" id="myBtn" style="display: block;"><img src="../Images/PageUp.png" width="30px;" height="30px;">
+        </button>
+    </div>
+
+</body>
